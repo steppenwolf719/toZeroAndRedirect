@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contagem Regressiva com JavaScript</title>
+    <title>toZeroAndRedirect</title>
 
 <script>
 var count = new Number();
-var count = 11; // inicia em 10
+var count = 11; // inicia em 10 na tela
 
 function start() {
     if((count -1) >= 0){
@@ -21,18 +21,17 @@ function start() {
         } else if (count < 10) {
             count = "0" + count;
         }
-        tempo.innerText = count;
+        time.innerText = count;
         setTimeout('start();', 1000); //alterar o numeral para aumentar ou diminuir a velocidade de contagem
     }
 }
 </script>
 
 <style>
-    #tempo{
+    #time{
         font: bold 200px Arial;
-        padding: 60px;
+        padding: 80px;
         color: #cfb000;
-        border: 2px ;
         width: 200px;
         weight: 200px;
         text-align: center;
@@ -42,6 +41,6 @@ function start() {
 
 </head>
 <body onload="start();">
-    <div id="tempo"></div>
+    <div id="time"></div>
 </body>
 </html>
